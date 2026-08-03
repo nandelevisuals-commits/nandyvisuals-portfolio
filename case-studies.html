@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Studies — Nandele Lwandiko / NANDYVISUALS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#080808;
+    --panel:#101011;
+    --line:#26262a;
+    --paper:#F2F0EE;
+    --mute:#8A8A92;
+    --pink:#FF1A6E;
+    --teal:#00CCCC;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--ink);color:var(--paper);
+    font-family:'Archivo',system-ui,sans-serif;
+    font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:940px;margin:0 auto;padding:0 24px}
+
+  /* ---------- masthead ---------- */
+  header{border-bottom:1px solid var(--line);padding:56px 0 40px}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--teal);margin:0 0 20px
+  }
+  h1{
+    font-size:clamp(38px,8vw,72px);font-weight:800;line-height:.95;
+    letter-spacing:-.03em;margin:0 0 18px;text-transform:uppercase;
+  }
+  h1 em{font-style:normal;color:var(--pink)}
+  .lede{max-width:60ch;color:#C9C7C4;font-size:17px;margin:0 0 28px}
+  .meta{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);
+    display:flex;flex-wrap:wrap;gap:8px 22px
+  }
+  .meta a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--pink)}
+  .meta a:hover{color:var(--pink)}
+
+  /* ---------- case ---------- */
+  .case{border-bottom:1px solid var(--line);padding:64px 0}
+  .case:last-of-type{border-bottom:0}
+  .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--mute);margin:0 0 14px;
+    display:flex;align-items:center;gap:10px
+  }
+  .tag b{color:var(--pink);font-weight:600}
+  .dot{width:5px;height:5px;background:var(--teal);display:inline-block}
+  h2{
+    font-size:clamp(28px,5.4vw,46px);font-weight:800;line-height:1.02;
+    letter-spacing:-.02em;margin:0 0 10px;text-transform:uppercase
+  }
+  .sub{color:#C9C7C4;max-width:62ch;margin:0 0 32px}
+
+  /* spec table — the production-paperwork device */
+  .spec{
+    border:1px solid var(--line);background:var(--panel);
+    margin:0 0 36px;font-family:'IBM Plex Mono',monospace;font-size:13px
+  }
+  .row{display:flex;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  .row dt{
+    flex:0 0 132px;padding:11px 14px;color:var(--mute);
+    font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+    border-right:1px solid var(--line);margin:0
+  }
+  .row dd{margin:0;padding:11px 14px;flex:1;color:var(--paper);line-height:1.5}
+
+  h3{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--teal);
+    margin:34px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)
+  }
+  p{margin:0 0 14px;color:#D6D4D1}
+  ul{margin:0 0 14px;padding-left:0;list-style:none}
+  li{
+    position:relative;padding-left:20px;margin-bottom:11px;color:#D6D4D1
+  }
+  li::before{
+    content:"";position:absolute;left:0;top:.62em;
+    width:8px;height:1px;background:var(--pink)
+  }
+  strong{color:#fff;font-weight:600}
+
+  /* ---------- signature: the shot ruler ---------- */
+  .ruler{margin:26px 0 8px;border:1px solid var(--line);background:var(--panel);padding:22px 18px 16px}
+  .ruler-label{
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--mute);margin:0 0 16px
+  }
+  .track{display:flex;gap:3px}
+  .shot{flex:1;min-width:0}
+  .bar{
+    height:44px;border:1px solid var(--line);border-bottom:2px solid var(--pink);
+    background:
+      linear-gradient(180deg,rgba(255,26,110,.02),rgba(255,26,110,.13));
+    display:flex;align-items:flex-end;padding:5px
+  }
+  .shot:nth-child(2) .bar{background:linear-gradient(180deg,rgba(255,26,110,.04),rgba(255,26,110,.22))}
+  .shot:nth-child(3) .bar{background:linear-gradient(180deg,rgba(255,26,110,.06),rgba(255,26,110,.32))}
+  .shot:nth-child(4) .bar{background:linear-gradient(180deg,rgba(255,26,110,.09),rgba(255,26,110,.46))}
+  .shot:nth-child(5) .bar{
+    background:linear-gradient(180deg,rgba(0,204,204,.10),rgba(0,204,204,.55));
+    border-bottom-color:var(--teal)
+  }
+  .n{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#fff;opacity:.85}
+  .tc{
+    font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--mute);
+    margin-top:7px;letter-spacing:.02em
+  }
+  .nm{font-size:11.5px;margin-top:3px;color:#D6D4D1;line-height:1.3}
+  .arc{
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);
+    margin-top:16px;padding-top:12px;border-top:1px solid var(--line);
+    letter-spacing:.04em
+  }
+  .arc span{color:var(--teal)}
+
+  /* ---------- outcome ---------- */
+  .out{
+    border-left:2px solid var(--teal);padding:2px 0 2px 18px;margin:8px 0 0
+  }
+  .out p{margin:0 0 10px}
+  .out p:last-child{margin:0}
+
+  footer{padding:52px 0 72px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute)}
+  footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--teal)}
+
+  @media (max-width:640px){
+    .row{flex-direction:column}
+    .row dt{flex:none;border-right:0;border-bottom:1px solid var(--line)}
+    .nm{display:none}
+    .track{gap:2px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .case,header>.wrap{animation:rise .5s ease both}
+    .case:nth-of-type(2){animation-delay:.06s}
+    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  }
+  a:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Nandele Lwandiko · NANDYVISUALS</p>
+    <h1>How the work<br>actually <em>gets made</em></h1>
+    <p class="lede">Two case studies on AI production workflow: one paid client campaign delivered through a full approval and rights process, one self-directed framework built to make a 15-second format repeatable. The finished videos live on the portfolio. This page is about the pipeline behind them.</p>
+    <div class="meta">
+      <span>Hampton, VA · remote / relocation</span>
+      <span><a href="https://portfolio.nandyvisuals.com">portfolio.nandyvisuals.com</a></span>
+      <span><a href="mailto:nandelelwandiko@gmail.com">nandelelwandiko@gmail.com</a></span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ CASE 01 ============ -->
+<section class="case">
+  <div class="wrap">
+    <p class="tag"><span class="dot"></span><b>Client campaign</b> · two engagements · delivered</p>
+    <h2>Sintra / PlayOS —<br>paid social, built to survive a rights review</h2>
+    <p class="sub">Two contracted 9:16 campaigns for Sintra (PlayOS, Inc.), an AI software company. Both ran as paid media on Meta with 30-day whitelisting through my own handle, which changed what "done" had to mean.</p>
+
+    <dl class="spec">
+      <div class="row"><dt>Client</dt><dd>Sintra — PlayOS, Inc. (Delaware)</dd></div>
+      <div class="row"><dt>Role</dt><dd>Concept, script, direction, voiceover, generation, edit, delivery</dd></div>
+      <div class="row"><dt>Deliverables</dt><dd>Round 1 — Helper Builder launch video (Instagram, X, organic + whitelisted). Round 2 — "IT MAKES ITSELF," social-automation spec ad (Instagram, Facebook, paid)</dd></div>
+      <div class="row"><dt>Format</dt><dd>9:16 vertical · ~15–40s · paid-placement spec</dd></div>
+      <div class="row"><dt>Stack</dt><dd>Seedance 2.0 · Higgsfield (element locking) · GPT Image 2 · CapCut · recorded VO</dd></div>
+      <div class="row"><dt>Approval flow</dt><dd>Script draft → client approval → video preview → client approval → publish</dd></div>
+    </dl>
+
+    <h3>The constraint</h3>
+    <p>A video that only has to look good on a feed and a video the client will put ad spend behind are two different deliverables. Whitelisting meant their paid campaign would run through my account and my face, so every asset had to clear on three axes at once: <strong>creative quality, brand accuracy, and rights.</strong> A miss on any one of them becomes the client's liability, not just a bad post.</p>
+
+    <h3>How I built it</h3>
+    <ul>
+      <li><strong>Identity locked before generation.</strong> I generated one master character still, then elementized it in Higgsfield so the same performer held across nine separate Seedance shots. Consistency was a pipeline step, not something I hoped for in the outputs.</li>
+      <li><strong>Real product UI over generated UI.</strong> The first cut used generated app mockups and the interface came back garbled — the fastest way to lose a software client's trust. I recut the open and replaced every UI beat with real screen captures from the product. Generated where generation is strong, captured where accuracy matters.</li>
+      <li><strong>Voiceover cut for the edit, not the script.</strong> I recorded and split the VO into four labeled chunks by function (hook / problem / solution / takeaway). The full read ran long against picture, so I kept the hook as spoken audio and carried the rest as on-screen text. Modular audio meant restructuring cost minutes instead of a re-record.</li>
+      <li><strong>Brand language enforced.</strong> The client corrected one product term mid-project; I swept the script, overlays, and captions rather than patching the line that was flagged.</li>
+    </ul>
+
+    <h3>The catch that mattered most</h3>
+    <p>Pre-delivery, I flagged that both videos were carrying music from Instagram's in-app licensed library. That library is cleared for organic posting and <strong>not</strong> for paid advertising. Since these were going into a paid Meta run, the audio was a live rights exposure. I re-exported both videos with royalty-free audio and reposted before releasing the partnership ad codes — so the codes I handed over pointed at clean assets.</p>
+
+    <h3>Scoping the access</h3>
+    <p>Whitelisting was granted narrowly and on purpose: partner access scoped to that ad run only, 30 days, no access to my ad account spend or payment methods, with revocation dated and calendared at the end of the run. The client advertises on their budget using my content. I keep control of the account.</p>
+
+    <div class="out">
+      <h3 style="margin-top:0">Outcome</h3>
+      <p>Both campaigns published live on both platforms, both approved through the full script-and-preview gate, both whitelisted and paid out. The client returned for a second engagement and expanded scope to include retroactive rights on the first video.</p>
+      <p style="color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:12px">Transferable: production QC · rights and clearance judgment · client review cycles · scoped platform permissions</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE 02 ============ -->
+<section class="case">
+  <div class="wrap">
+    <p class="tag"><span class="dot"></span><b>Self-directed system</b> · spec campaign · published framework</p>
+    <h2>Medicube Deep Vita C —<br>a 15-second format, made repeatable</h2>
+    <p class="sub">A spec K-beauty campaign with no client and no brief, built to answer a workflow question: what has to be decided <em>before</em> anyone generates a frame, so that a 15-second skincare video performs by design instead of by luck?</p>
+
+    <dl class="spec">
+      <div class="row"><dt>Subject</dt><dd>Medicube Deep Vita C (K-beauty skincare) — spec, self-directed</dd></div>
+      <div class="row"><dt>Role</dt><dd>Creative direction, framework design, storyboard, generation, documentation</dd></div>
+      <div class="row"><dt>Output</dt><dd>5-shot storyboard system · concept boards · finished 15s cut · product B-roll · published process breakdown</dd></div>
+      <div class="row"><dt>Stack</dt><dd>GPT Image 2 (storyboards, concept boards, typographic stills) · Seedance 2.0 (motion)</dd></div>
+      <div class="row"><dt>Reusability</dt><dd>Product-agnostic — swap the hero, keep the arc</dd></div>
+    </dl>
+
+    <h3>The system</h3>
+    <p>Five shots, fixed timecodes, and one assigned job per shot. The order isn't stylistic — it's an escalation, and each beat only works because the one before it earned it.</p>
+
+    <div class="ruler">
+      <p class="ruler-label">Shot ruler — 15s / 5 beats / assigned function</p>
+      <div class="track">
+        <div class="shot">
+          <div class="bar"><span class="n">01</span></div>
+          <p class="tc">0:00–0:03</p><p class="nm">Bare skin intro — real texture, no filter</p>
+        </div>
+        <div class="shot">
+          <div class="bar"><span class="n">02</span></div>
+          <p class="tc">0:03–0:06</p><p class="nm">Application — texture, absorption</p>
+        </div>
+        <div class="shot">
+          <div class="bar"><span class="n">03</span></div>
+          <p class="tc">0:06–0:09</p><p class="nm">Product reveal — brand visibility</p>
+        </div>
+        <div class="shot">
+          <div class="bar"><span class="n">04</span></div>
+          <p class="tc">0:09–0:12</p><p class="nm">Glow check — visible result</p>
+        </div>
+        <div class="shot">
+          <div class="bar"><span class="n">05</span></div>
+          <p class="tc">0:12–0:15</p><p class="nm">Hero shot — full lineup, CTA</p>
+        </div>
+      </div>
+      <p class="arc">Energy arc — curiosity → product experience → <span>trust</span> → transformation → <span>conversion</span></p>
+    </div>
+
+    <h3>Why it's built this way</h3>
+    <ul>
+      <li><strong>The framework is the deliverable.</strong> Direction, arc, palette, and shot function are locked in the storyboard. Generation executes a decision that's already been made — which is what makes output consistent across regenerations and across products.</li>
+      <li><strong>Shot 01 carries real skin texture on purpose.</strong> Opening on unretouched texture is what buys the credibility that shot 04's result claim spends. Open too polished and the payoff reads as a filter.</li>
+      <li><strong>Right model per task.</strong> GPT Image 2 handles storyboards, concept boards, and anything with typography; Seedance handles motion. Routing by strength beats forcing one tool through the whole pipeline.</li>
+      <li><strong>Documented to be handed off.</strong> Timecodes, energy arc, color palette, and production notes are written down — so someone else could shoot it, or I could run it against a different hero product next week.</li>
+    </ul>
+
+    <div class="out">
+      <h3 style="margin-top:0">Outcome</h3>
+      <p>Published as an open framework alongside the finished assets. It became my most-viewed process breakdown (~1.3k views on r/AI_UGC_Marketing) and drew direct questions from other creators about the storyboard system and the prompt design behind it. The storyboard graphics now do double duty as searchable process content.</p>
+      <p style="color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:12px">Transferable: workflow documentation · repeatable pipeline patterns · tool selection · teaching a system to other creators</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Finished work — <a href="https://portfolio.nandyvisuals.com">portfolio.nandyvisuals.com</a><br>
+    Available for creative technologist and AI production roles · remote or relocation
+  </div>
+</footer>
+
+</body>
+</html>
