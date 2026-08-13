@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OLIPOP Raspberry Sherbet — Spec Film | NANDYVISUALS</title>
+<meta name="description" content="A spec product film for OLIPOP Raspberry Sherbet. Macro liquid work, shot for paid social. Directed by Nandele Lwandiko." />
+<meta property="og:title" content="OLIPOP Raspberry Sherbet — Spec Film" />
+<meta property="og:description" content="Every time she sips, you go inside the can for a second, and nobody stops skating." />
+<meta property="og:image" content="assets/olipop/02_can_hero_rink.jpg" />
+<meta property="og:type" content="video.other" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --ink:#0b0b0d; --ink-2:#131316; --ink-3:#1b1b20;
+  --paper:#f3efe9; --muted:#84848f;
+  --pink:#ff4d97; --pink-deep:#d8327c;
+  --teal:#2ee6cf;
+  --line:rgba(243,239,233,0.12); --line-soft:rgba(243,239,233,0.06);
+  --maxw:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  background:var(--ink); color:var(--paper);
+  font-family:"Archivo",system-ui,-apple-system,sans-serif;
+  line-height:1.55; letter-spacing:.005em; overflow-x:hidden; position:relative;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(60% 50% at 12% 0%, rgba(255,77,151,.15), transparent 62%),
+    radial-gradient(55% 45% at 96% 10%, rgba(46,230,207,.10), transparent 62%);
+}
+body::after{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap{position:relative; z-index:1; max-width:var(--maxw); margin:0 auto; padding:0 22px;}
+
+a{color:inherit;}
+.back{
+  display:inline-flex; align-items:center; gap:9px; margin-top:34px;
+  font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--muted); text-decoration:none;
+  transition:color .25s;
+}
+.back:hover{color:var(--teal);}
+
+header{padding:22px 0 34px;}
+.kicker{
+  font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.32em;
+  text-transform:uppercase; color:var(--teal); display:flex; align-items:center;
+  gap:12px; flex-wrap:wrap; margin-top:40px;
+}
+.kicker::before{content:""; width:26px; height:1px; background:var(--teal); display:inline-block;}
+h1{
+  font-family:"Fraunces",Georgia,serif; font-weight:500;
+  font-size:clamp(40px,8.5vw,82px); line-height:.98; letter-spacing:-.02em; margin:18px 0 0;
+}
+h1 b{font-weight:600; font-style:italic; color:var(--pink);}
+.logline{
+  font-family:"Fraunces",Georgia,serif; font-style:italic;
+  font-size:clamp(19px,2.6vw,26px); line-height:1.4;
+  max-width:640px; margin-top:24px; color:var(--paper);
+}
+.meta{
+  display:flex; flex-wrap:wrap; gap:0 46px; margin-top:36px;
+  padding-top:24px; border-top:1px solid var(--line);
+}
+.meta div{margin-bottom:16px;}
+.meta dt{
+  font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.24em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:5px;
+}
+.meta dd{font-size:15px; font-weight:500;}
+
+.player{
+  margin:14px 0 0; border:1px solid var(--line); border-radius:14px; overflow:hidden;
+  background:var(--ink-2); box-shadow:0 40px 90px -40px rgba(0,0,0,.9);
+}
+.player video{display:block; width:100%; height:auto; background:#000;}
+.caption{
+  font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--muted); margin-top:12px;
+}
+
+section{padding:64px 0 0;}
+h2{
+  font-family:"Fraunces",Georgia,serif; font-weight:500;
+  font-size:clamp(26px,4vw,38px); letter-spacing:-.01em; line-height:1.1;
+}
+h2 span{color:var(--teal); font-family:"JetBrains Mono",monospace;
+  font-size:11px; letter-spacing:.3em; display:block; margin-bottom:14px;
+  text-transform:uppercase; font-weight:400;}
+.body-copy{max-width:660px; margin-top:20px; font-size:16.5px; color:rgba(243,239,233,.86);}
+.body-copy p{margin-bottom:17px;}
+.body-copy strong{color:var(--paper); font-weight:600;}
+
+.pull{
+  margin:40px 0; padding:26px 28px; border-left:2px solid var(--pink);
+  background:linear-gradient(90deg, rgba(255,77,151,.07), transparent 80%);
+  font-family:"Fraunces",Georgia,serif; font-style:italic;
+  font-size:clamp(18px,2.4vw,23px); line-height:1.4; max-width:680px;
+}
+
+.grid{
+  display:grid; gap:14px; margin-top:32px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+.tile{
+  position:relative; border:1px solid var(--line); border-radius:11px; overflow:hidden;
+  background:var(--ink-2); aspect-ratio:9/16; cursor:zoom-in;
+}
+.tile img{display:block; width:100%; height:100%; object-fit:cover;
+  transition:transform .8s cubic-bezier(.2,.7,.2,1), filter .5s;}
+.tile:hover img{transform:scale(1.045);}
+.tile figcaption{
+  position:absolute; left:0; right:0; bottom:0; padding:34px 14px 12px;
+  background:linear-gradient(transparent, rgba(11,11,13,.92));
+  font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.14em;
+  text-transform:uppercase; color:rgba(243,239,233,.92);
+}
+
+.beats{margin-top:28px; border-top:1px solid var(--line-soft);}
+.beat{
+  display:grid; grid-template-columns:64px 1fr; gap:18px;
+  padding:16px 0; border-bottom:1px solid var(--line-soft); align-items:baseline;
+}
+.beat b{
+  font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.1em;
+  color:var(--teal); font-weight:500;
+}
+.beat span{font-size:15px; color:rgba(243,239,233,.86);}
+
+.stack{list-style:none; display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;}
+.stack li{
+  font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; padding:8px 13px; border:1px solid var(--line);
+  border-radius:999px; color:rgba(243,239,233,.72);
+}
+
+.cta{
+  margin:76px 0 0; padding:38px 32px; border:1px solid var(--line);
+  border-radius:16px; background:linear-gradient(140deg, var(--ink-3), var(--ink-2));
+}
+.cta h3{
+  font-family:"Fraunces",Georgia,serif; font-weight:500;
+  font-size:clamp(23px,3.4vw,32px); line-height:1.15; letter-spacing:-.01em;
+}
+.cta p{margin-top:14px; max-width:520px; color:rgba(243,239,233,.8); font-size:16px;}
+.btns{display:flex; flex-wrap:wrap; gap:11px; margin-top:26px;}
+.btn{
+  display:inline-flex; align-items:center; gap:9px; padding:14px 22px;
+  border-radius:999px; text-decoration:none; font-weight:600; font-size:14.5px;
+  border:1px solid var(--line); color:var(--paper); transition:all .25s;
+}
+.btn:hover{border-color:var(--teal); color:var(--teal); transform:translateY(-1px);}
+.btn.solid{background:var(--pink); border-color:var(--pink); color:#0b0b0d;}
+.btn.solid:hover{background:var(--teal); border-color:var(--teal); color:#0b0b0d;}
+.direct{
+  margin-top:22px; font-family:"JetBrains Mono",monospace; font-size:11px;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--muted);
+}
+.direct a{color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(46,230,207,.35);}
+.direct a:hover{color:var(--paper); border-bottom-color:var(--paper);}
+
+.disclaimer{
+  margin:56px 0 0; padding-top:22px; border-top:1px solid var(--line-soft);
+  font-size:13px; color:var(--muted); max-width:640px; line-height:1.6;
+}
+footer{padding:44px 0 60px; margin-top:26px;
+  font-family:"JetBrains Mono",monospace; font-size:10.5px;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted);}
+
+/* lightbox */
+.lb{
+  position:fixed; inset:0; z-index:99; display:none; place-items:center;
+  background:rgba(6,6,8,.95); padding:22px; cursor:zoom-out;
+}
+.lb.on{display:grid;}
+.lb img{max-width:100%; max-height:92vh; border-radius:8px;
+  box-shadow:0 40px 100px -30px rgba(0,0,0,.9);}
+.lb-x{
+  position:absolute; top:20px; right:24px; font-family:"JetBrains Mono",monospace;
+  font-size:11px; letter-spacing:.2em; color:var(--paper); opacity:.7;
+  text-transform:uppercase;
+}
+@media (max-width:640px){
+  .meta{gap:0 32px;}
+  .beat{grid-template-columns:56px 1fr; gap:14px;}
+  .cta{padding:30px 22px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important; transition:none!important;}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; All work</a>
+
+  <header>
+    <div class="kicker">Spec Film &nbsp;/&nbsp; Product Motion &nbsp;/&nbsp; 2026</div>
+    <h1>OLIPOP<br /><b>Raspberry Sherbet</b></h1>
+    <p class="logline">Every time she sips, you go inside the can for a second, and nobody stops skating.</p>
+
+    <dl class="meta">
+      <div><dt>Client</dt><dd>Unsolicited spec</dd></div>
+      <div><dt>Format</dt><dd>:26 product film, 9:16</dd></div>
+      <div><dt>Role</dt><dd>Concept, direction, grade, cut</dd></div>
+      <div><dt>Method</dt><dd>Generative, frame by frame</dd></div>
+    </dl>
+  </header>
+
+  <div class="player">
+    <video src="assets/olipop/olipop-inside-lane.mp4"
+           poster="assets/olipop/poster.jpg"
+           controls playsinline preload="metadata"></video>
+  </div>
+  <p class="caption">The Inside Lane &nbsp;·&nbsp; :26 &nbsp;·&nbsp; sound on</p>
+
+  <section>
+    <h2><span>The gap</span>Nobody has shot this liquid.</h2>
+    <div class="body-copy">
+      <p>OLIPOP relaunched this year as <strong>the feel good soda</strong>. New identity, new cans, a national spot, a sonic signature. The whole platform moved away from explaining gut health and toward wanting the drink.</p>
+      <p>Watch the campaign closely though and the can never gets a beauty shot. It sits in a hand, small in frame, soft in the background. No pour. No fizz. No condensation breaking. And the one moment where the film goes inside the product, it goes to animation.</p>
+      <p>That is the whole opportunity. The most craveable thing a soda brand owns is the liquid, and the liquid was the one thing nobody had photographed.</p>
+    </div>
+
+    <div class="pull">The one place their film went inside the can, they had to draw it. So I shot it.</div>
+  </section>
+
+  <section>
+    <h2><span>The idea</span>One rule, held for twenty six seconds.</h2>
+    <div class="body-copy">
+      <p>An outdoor rink at the hottest hour. A skater and her crew, cans in hand, refusing to slow down. And a single conceit: <strong>every sip cuts the camera inside the can</strong>, then drops it right back on the floor mid glide.</p>
+      <p>The interior is treated as a real location. One hard shaft of light from above, warm ruby, physical bubbles, a cream bloom entering from below and marbling through before it resolves clear. Not a particle effect. A room.</p>
+      <p>Raspberry Sherbet is 7% juice, so the liquid is translucent, closer to cranberry than to a milkshake. The sherbet is a flavour promise, not a texture. The film makes that tension the hero: the scoop that isn't there.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span>Frames</span>Stills, pulled from the film.</h2>
+    <div class="grid" id="grid">
+      <figure class="tile"><img src="assets/olipop/01_cream_bloom_interior.jpg" alt="Cream bloom suspended inside translucent ruby liquid" loading="lazy" /><figcaption>Interior · cream bloom</figcaption></figure>
+      <figure class="tile"><img src="assets/olipop/06_ruby_caustic_tunnel.jpg" alt="Ruby caustics inside the can" loading="lazy" /><figcaption>Interior · caustics</figcaption></figure>
+      <figure class="tile"><img src="assets/olipop/02_can_hero_rink.jpg" alt="OLIPOP Raspberry Sherbet can on rink concrete" loading="lazy" /><figcaption>Hero · rink floor</figcaption></figure>
+      <figure class="tile"><img src="assets/olipop/03_two_friends_laughing.jpg" alt="Two skaters laughing in hard sun" loading="lazy" /><figcaption>Crew · hard sun</figcaption></figure>
+      <figure class="tile"><img src="assets/olipop/04_lime_wheels_macro.jpg" alt="Lime polyurethane wheels crossing a concrete seam" loading="lazy" /><figcaption>Macro · wheels on seam</figcaption></figure>
+      <figure class="tile"><img src="assets/olipop/05_silhouette_sun.jpg" alt="Skater silhouetted against low sun" loading="lazy" /><figcaption>Withheld reveal</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2><span>Structure</span>How it cuts.</h2>
+    <div class="beats">
+      <div class="beat"><b>00:00</b><span>Submerged. A single bubble climbing ruby liquid. You cannot tell yet what you are looking at.</span></div>
+      <div class="beat"><b>00:02</b><span>The sip. Face, sweat, hard sun. Relief, not performance.</span></div>
+      <div class="beat"><b>00:04</b><span>Wheels at four centimetres off hot concrete. Grit spraying.</span></div>
+      <div class="beat"><b>00:07</b><span>Tab flex, seal break, mist venting into the sun.</span></div>
+      <div class="beat"><b>00:08</b><span>Push through the can mouth. Everything freezes mid pour. Only the camera keeps moving.</span></div>
+      <div class="beat"><b>00:11</b><span>The can passes hand to hand at speed. Nobody stops.</span></div>
+      <div class="beat"><b>00:15</b><span>Full freeze. Four skaters at extension, droplets suspended, dust locked in the beam.</span></div>
+      <div class="beat"><b>00:23</b><span>Inside one last time. The last of the liquid draining out of frame.</span></div>
+      <div class="beat"><b>00:24</b><span>The can alone on the concrete, still beaded, one droplet running down.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span>Craft</span>What holds it together.</h2>
+    <div class="body-copy">
+      <p>One light source across the whole film. Hard high sun bouncing off pale concrete as the only fill, and inside the can that same sun reads as a shaft through the mouth, so the interior never breaks grade with the exterior.</p>
+      <p>Deep focus on the skate work at T5.6, macro at T4 with the focus plane one bubble deep. 24fps at a 180 degree shutter, so every wheel smears at speed. Three permitted imperfections and no more: halation on wet aluminium, one focus hunt, edge fringing.</p>
+      <p>The label was locked to the real can from the first frame to the last. Every icon, every badge, every line of type.</p>
+    </div>
+    <ul class="stack">
+      <li>Concept</li><li>Direction</li><li>Identity lock</li><li>Physics lock</li>
+      <li>Macro liquid</li><li>Grade</li><li>Sound design</li><li>Cut</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <h3>Built on my own time, for a brand I wanted to work with.</h3>
+    <p>I direct product films and campaign motion for beverage, beauty and lifestyle brands. If you want the version of this made for your flavour, your can, your drop, that is a conversation I would enjoy.</p>
+    <div class="btns">
+      <a class="btn solid" href="mailto:nandyvisuals@gmail.com?subject=Product%20film%20enquiry">Start a project</a>
+      <a class="btn" href="index.html">See the rest of the work</a>
+      <a class="btn" href="https://instagram.com/nandyvisuals" target="_blank" rel="noopener">@nandyvisuals</a>
+    </div>
+    <p class="direct">Direct &nbsp;·&nbsp; <a href="mailto:nandyvisuals@gmail.com">nandyvisuals@gmail.com</a></p>
+  </div>
+
+  <p class="disclaimer">
+    Unsolicited spec work. Not commissioned by, affiliated with, or endorsed by OLIPOP.
+    Product design, packaging and all brand marks belong to OLIPOP. Made independently
+    to demonstrate a creative approach, and shared as a portfolio piece only.
+  </p>
+
+  <footer>Nandele Lwandiko &nbsp;·&nbsp; NANDYVISUALS &nbsp;·&nbsp; nandyvisuals@gmail.com &nbsp;·&nbsp; 2026</footer>
+
+</div>
+
+<div class="lb" id="lb"><span class="lb-x">Close</span><img id="lbImg" src="" alt="" /></div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg');
+  document.getElementById('grid').addEventListener('click', function(e){
+    var img=e.target.closest('img'); if(!img) return;
+    lbImg.src=img.src; lbImg.alt=img.alt; lb.classList.add('on');
+  });
+  lb.addEventListener('click', function(){ lb.classList.remove('on'); lbImg.src=''; });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape'){ lb.classList.remove('on'); lbImg.src=''; }
+  });
+})();
+</script>
+
+</body>
+</html>
